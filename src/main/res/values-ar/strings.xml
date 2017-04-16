@@ -277,7 +277,6 @@
   <string name="defualt">الإفتراضي</string>
   <string name="path">المسار</string>
   <string name="cut">قص</string>
-  <string name="empty"></string>
   <string name="search">بحث</string>
   <string name="start_ftp">ابدأ</string>
   <string name="information">معلومات</string>
@@ -289,10 +288,13 @@
   <string name="height">الارتفاع</string>
   <string name="exposure_time">مدة التعرض للضوء</string>
   <string name="focal_length">البعد البؤري</string>
+  <string name="document">مستند</string>
   <!-- reference to a document file -->
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
   <string name="tap_and_hold_tips">اضغط مطولًا على الملف أو المجلد لإظهار المزيد من الخيارات</string>
   <string name="permission_other">آخرى</string>
+  <string name="clipboard_path_copy">تم نسخ المسار إلى الحافظة</string>
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

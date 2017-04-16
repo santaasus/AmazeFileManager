@@ -35,14 +35,15 @@
   <string name="other">Aner</string>
   <string name="password">Passwuert</string>
   <string name="defualt">Standard</string>
-  <string name="empty"></string>
   <string name="start_ftp">Start</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
   <!-- reference to audio/video file -->
+  <string name="document">Dokument</string>
   <!-- reference to a document file -->
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
   <string name="permission_other">Aner</string>
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

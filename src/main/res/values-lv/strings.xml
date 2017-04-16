@@ -45,7 +45,6 @@
   <string name="none">Nav</string>
   <string name="password">Parole</string>
   <string name="path">Ceļš</string>
-  <string name="empty"></string>
   <string name="information">Informācija</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
@@ -59,4 +58,5 @@
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

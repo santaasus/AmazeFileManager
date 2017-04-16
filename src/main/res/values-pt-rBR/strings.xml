@@ -19,7 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-  <string name="app_name">Gerenciador de Arquivos Amaze</string>
+  <string name="app_name">Amaze</string>
   <string name="drawer_open">Abrir menu de navegação</string>
   <string name="drawer_close">Fechar menu de navegação</string>
   <string name="books">Favoritos</string>
@@ -76,6 +76,8 @@
   <string name="tab">Aba</string>
   <string name="file">Arquivo</string>
   <string name="folder">Pasta</string>
+  <string name="title_files">Arquivos</string>
+  <string name="title_dirs">Diretórios</string>
   <string name="newfolder">Nova pasta</string>
   <string name="entername">Insira o nome</string>
   <string name="extracting">Extraindo</string>
@@ -382,7 +384,6 @@
   <string name="path">Caminho</string>
   <string name="renamebookmark">Modificar favorito</string>
   <string name="cut">Recortar</string>
-  <string name="empty"></string>
   <string name="search">Procurar</string>
   <string name="invalid_name">Nome inválido</string>
   <string name="search_hint">Digite para procurar&#8230;</string>
@@ -420,47 +421,50 @@
   <string name="use_custom_ip">Usar IP personalizado</string>
   <string name="bookmark_lost">Favorito não encontrado, recriando&#8230;</string>
   <string name="smb_instructions">
-        <html>
-            <body>
-            <center>\n
-            <h1>Como acessar uma pasta compartilhada do Windows no Android (smb)</h1>\n
-            </center>\n
-            <ol>\n
-            <li>\n
-            <b>Ative o compartilhamento de arquivos</b>\n
-            <br/>Abra o Painel de Controle, clique em \'Escolher opções de grupo doméstico e de 
-                    compartilhamento\' no grupo Rede e Internet, e depois clique em \'Alterar as 
-                    configurações de compartilhamento avançadas\'. Ative a opção de compartilhamento 
-                    de arquivo e impressora.\n
-            </li><br/><li/><b>Configurações adicionais de compartilhamento de arquivos</b><br/>Você 
-                    pode querer configurar outras definições de compartilhamento avançadas. \n
-            Por exemplo, você pode ativar o acesso aos seus arquivos sem precisar digitar uma senha, 
-                caso confie em todos os dispositivos da sua rede local. Assim que o compartilhamento 
-                de arquivo e impressora estiver ativo, você poderá abrir o Windows Explorer, clicar 
-                com o botão direito do mouse em uma pasta que quiser compartilhar e selecionar 
-                Propriedades. \n
-            Clique no botão Compartilhar para que a pasta fique disponível na rede.\n
-            <li><li/><br/><b>Certifique-se de que ambos os dispositivos estejam na mesma rede Wi-fi</b><br/> \n
-            Esta funcionalidade disponibiliza arquivos na rede local, permitindo que seu computador e 
-                    aparelhos móveis tenham acesso a mesma rede local. Você não poderá acessar uma 
-                    pasta compartilhada do Windows através da Internet ou quando seu smartphone estiver 
-                    conectado através de dados móveis - ele precisa estar conectado à rede Wi-Fi.</li><li>\n
-            <br/><b>Procure o endereço IP</b>\n
-            <br/>Abra o Prompt de Comando. Digite \'ipconfig\' e pressione Enter. Procure por Gateway
-                    Padrão no seu adaptador de rede para identificar o endereço IP do seu roteador.  
-                    Encontre o \"Endereço IPv4\" na mesma seção do adaptador para identificar o 
-                    endereço IP do seu computador.</li><li/><br/>\n
-            <b>Digite os detalhes na caixa de diálogo smb</b>\n
-            <br/>\n
-            </ol>\n
-            </body>\n
-            </html>
+<html>
+<body>
+<h1>Como acessar a pasta compartilhada do Windows no android (smb)</h1>\n\n
+<ul>
+<li>
+<b>Ativar compartilhamento de arquivos</b>\n
+</li>
+<p style="margin-left: 40px">
+Abra o Painel de Controle, clique em Escolher o grupo doméstico e as opções de compartilhamento em Rede e Internet e clique em Alterar configurações de compartilhamento avançadas. Ative o recurso de compartilhamento de arquivos e impressoras.\n\n
+</p>
+
+<li>
+<b>Configurações adicionais de compartilhamento de arquivos</b>\n
+</li>
+<p style="margin-left: 40px">
+Você também pode querer configurar as outras configurações de compartilhamento avançadas aqui. \n
+Por exemplo, você pode habilitar o acesso aos seus arquivos sem uma senha se confiar em todos os dispositivos em sua rede local. Uma vez que o compartilhamento de arquivos e impressoras está ativado, você pode abrir o File Explorer ou Windows Explorer, clique com o botão direito do mouse em uma pasta que você deseja compartilhar E selecione Propriedades. \n
+Clique no botão Compartilhar e disponibilize a pasta na rede.\n\n
+</p>
+
+<li>
+<b>Certifique-se de que ambos os dispositivos estejam no mesma rede Wifi</b>\n
+</li>
+<p style="margin-left: 40px">
+Esta funcionalidade torna os arquivos disponíveis na rede local, por isso o seu PC e os dispositivos móveis têm de estar na mesma rede local. Você não pode acessar uma pasta compartilhada do Windows pela Internet ou quando o smartphone está utilizando dados móveis - ele precisa estar conectado ao Wi-Fi.\n\n
+</p>
+
+<li>
+<b>Localizar endereço IP</b>\n
+</li>
+<p style="margin-left: 40px">
+Abra o prompt de comando. Digite \'ipconfig\' e pressione Enter. Procure Gateway Padrão em seu adaptador de rede para o endereço IP do seu roteador. Procure \"Endereço IPv4\" na mesma seção do adaptador para encontrar o endereço IP do seu computador.\n\n
+</p>
+
+<b>Inserir detalhes na caixa de diálogo smb</b>\n
+</ul>
+</body>
+</html>
     </string>
   <string name="share_limit">Não é possível compartilhar mais que 100 arquivos</string>
   <string name="otg_access">Selecione a raiz do dispositivo OTG</string>
   <string name="no_profile_pic">Nenhuma foto de perfil G +</string>
   <string name="opening">Abertura...</string>
-  <string name="information">Informação</string>
+  <string name="information">Informações</string>
   <!-- reference to file accessed date -->
   <string name="accessed">Acessado</string>
   <!-- reference to file modified date -->
@@ -527,6 +531,9 @@
   <string name="processing_file">Processamento de arquivo</string>
   <string name="current_speed">Velocidade atual</string>
   <string name="smb_launch_error">Você precisará copiar este arquivo para armazenamento para abri-lo</string>
+  <string name="error_file_not_found">Erro: Arquivo não encontrado</string>
+  <string name="error_io">Erro I/O</string>
+  <string name="error_root_not_permitted">Erro: Permissão root não concedida</string>
   <string name="medium_text">Texto Médio</string>
   <string name="tap_and_hold_tips">Toque longo num arquivo ou pasta para mais opções</string>
   <string name="permission_read">Lidas</string>
@@ -535,4 +542,26 @@
   <string name="permission_owner">Proprietário</string>
   <string name="permission_group">Grupo</string>
   <string name="permission_other">Outro</string>
+  <string name="clipboard_path_copy">Caminho copiado para a área de transferência</string>
+  <string name="error_busybox">Busybox não encontrado. Fechando o shell interativo.</string>
+  <string name="service_timer">Tempo decorrido</string>
+  <string name="please_wait">Por favor, aguarde</string>
+  <string name="no_applications">Não há aplicativos</string>
+  <string name="ftp_path">Caminho compartilhado</string>
+  <string name="ftp_path_hint">Caminho para a raiz do diretório para compartilhar</string>
+  <string name="error_ftp_path_file">Caminho não é um diretório</string>
+  <string name="change">Alterar</string>
+  <string name="unknown_error">Ops. Algo deu errado!</string>
+  <string name="ftp_path_change_success">Caminho FTP alterado com sucesso</string>
+  <string name="ftp_path_change_error_invalid">Caminho inválido</string>
+  <string name="ftp_status_no_connection">Sem conexão</string>
+  <string name="ftp_status_secure_connection">Conexão Segura</string>
+  <string name="ftp_status_title">Estado</string>
+  <string name="ftp_port">Porta</string>
+  <string name="ftp_login">Acessar</string>
+  <string name="field_empty">O campo não pode ficar vazio</string>
+  <string name="ftp_timeout">Tempo limite de ociosidade</string>
+  <string name="ftp_seconds">Segundos</string>
+  <!-- references 'name/size/location/hash' copied to clipboard -->
+  <string name="contributors_6_summary">Servidor FTP</string>
 </resources>

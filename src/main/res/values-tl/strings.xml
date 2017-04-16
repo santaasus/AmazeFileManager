@@ -43,7 +43,6 @@
   <string name="color_title">Kulay</string>
   <string name="none">Wala</string>
   <string name="path">Daanan</string>
-  <string name="empty"></string>
   <string name="information">Impormasyon</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
@@ -55,4 +54,5 @@
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

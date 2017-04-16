@@ -50,7 +50,6 @@
   <string name="password">Şifrə</string>
   <string name="defualt">Susmaya görə</string>
   <string name="path">Cığır</string>
-  <string name="empty"></string>
   <string name="information">Məlumat</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
@@ -65,4 +64,5 @@
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
   <string name="permission_other">Digər</string>
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

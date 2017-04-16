@@ -41,11 +41,11 @@
   <string name="Yellow">เหลือง</string>
   <string name="version">เวอร์ชัน</string>
   <string name="details">รายละเอียด</string>
+  <string name="text">ข้อความ</string>
   <string name="color_title">สี</string>
   <string name="none">ไม่มี</string>
   <string name="password">รหัสผ่าน</string>
   <string name="path">เส้นทาง</string>
-  <string name="empty"></string>
   <string name="information">ข้อมูล</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
@@ -55,8 +55,10 @@
   <string name="height">ความสูง</string>
   <string name="exposure_time">เวลาเปิดรับแสง</string>
   <string name="focal_length">ความยาวโฟกัส</string>
+  <string name="document">เอกสาร</string>
   <!-- reference to a document file -->
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

@@ -37,7 +37,6 @@
   <string name="version">ورژن</string>
   <string name="color_title">رنگ</string>
   <string name="none">کوئی نہیں</string>
-  <string name="empty"></string>
   <string name="information">معلومات</string>
   <!-- reference to file accessed date -->
   <!-- reference to file modified date -->
@@ -48,4 +47,5 @@
   <!-- %s will be replaced with either copied or moved -->
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>

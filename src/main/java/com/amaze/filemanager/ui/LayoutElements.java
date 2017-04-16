@@ -28,8 +28,13 @@ import com.amaze.filemanager.filesystem.BaseFile;
 import com.amaze.filemanager.utils.Futils;
 import com.amaze.filemanager.utils.OpenMode;
 
-public class Layoutelements implements Parcelable {
-    public Layoutelements(Parcel im) {
+import java.util.Calendar;
+
+public class LayoutElements implements Parcelable {
+
+    private static final String CURRENT_YEAR = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+
+    public LayoutElements(Parcel im) {
         title = im.readString();
         desc = im.readString();
         permissions = im.readString();
@@ -37,20 +42,14 @@ public class Layoutelements implements Parcelable {
         int j = im.readInt();
         date = im.readLong();
         int i = im.readInt();
-        if (i == 0) {
-            header = false;
-        } else {
-            header = true;
-        } if (j == 0) {
-            isDirectory = false;
-        } else {
-            isDirectory= true;
-        }
+        header = i != 0;
+        isDirectory = j != 0;
         // don't save bitmaps in parcel, it might exceed the allowed transaction threshold
         //Bitmap bitmap = (Bitmap) im.readParcelable(getClass().getClassLoader());
         // Convert Bitmap to Drawable:
         //imageId = new BitmapDrawable(bitmap);
         date1 = im.readString();
+        size = im.readString();
         longSize=im.readLong();
     }
 
@@ -70,6 +69,7 @@ public class Layoutelements implements Parcelable {
         p1.writeInt(header ? 1 : 0);
         //p1.writeParcelable(imageId.getBitmap(), p2);
         p1.writeString(date1);
+        p1.writeString(size);
         p1.writeLong(longSize);
         // TODO: Implement this method
     }
@@ -85,8 +85,10 @@ public class Layoutelements implements Parcelable {
     private String date1 = "";
     private boolean header;
     //same as hfile.modes but different than openmode in Main.java
-    private OpenMode mode=OpenMode.FILE;
-    public Layoutelements(BitmapDrawable imageId, String title, String desc, String permissions, String symlink, String size,long longSize,  boolean header, String date,boolean isDirectory) {
+    private OpenMode mode = OpenMode.FILE;
+
+    public LayoutElements(BitmapDrawable imageId, String title, String desc, String permissions,
+                          String symlink, String size, long longSize, boolean header, String date, boolean isDirectory) {
         this.imageId = imageId;
         this.title = title;
         this.desc = desc;
@@ -98,19 +100,18 @@ public class Layoutelements implements Parcelable {
         this.isDirectory = isDirectory;
         if (!date.trim().equals("")) {
             this.date = Long.parseLong(date);
-            this.date1 = Futils.getdate(this.date, "MMM dd, yyyy", "16");
+            this.date1 = Futils.getdate(this.date, CURRENT_YEAR);
         }
     }
 
-
-    public static final Parcelable.Creator<Layoutelements> CREATOR =
-            new Parcelable.Creator<Layoutelements>() {
-                public Layoutelements createFromParcel(Parcel in) {
-                    return new Layoutelements(in);
+    public static final Parcelable.Creator<LayoutElements> CREATOR =
+            new Parcelable.Creator<LayoutElements>() {
+                public LayoutElements createFromParcel(Parcel in) {
+                    return new LayoutElements(in);
                 }
 
-                public Layoutelements[] newArray(int size) {
-                    return new Layoutelements[size];
+                public LayoutElements[] newArray(int size) {
+                    return new LayoutElements[size];
                 }
             };
 
@@ -120,12 +121,12 @@ public class Layoutelements implements Parcelable {
 
     public void setImageId(BitmapDrawable imageId){this.imageId=imageId;}
     public String getDesc() {
-        return desc.toString();
+        return desc;
     }
 
 
     public String getTitle() {
-        return title.toString();
+        return title;
     }
 
     public OpenMode getMode() {
@@ -137,9 +138,11 @@ public class Layoutelements implements Parcelable {
     }
 
     public boolean isDirectory() {
-        return isDirectory;}
-    public BaseFile generateBaseFile(){
-        BaseFile baseFile=new BaseFile(getDesc(),getPermissions(),getDate1(),longSize,isDirectory());
+        return isDirectory;
+    }
+
+    public BaseFile generateBaseFile() {
+        BaseFile baseFile=new BaseFile(getDesc(), getPermissions(), getDate1(), getlongSize(), isDirectory());
         baseFile.setMode(mode);
         baseFile.setName(title);
         return baseFile;
@@ -148,6 +151,7 @@ public class Layoutelements implements Parcelable {
     public String getSize() {
         return size;
     }
+
     public long getlongSize() {
         return longSize;
     }
@@ -169,9 +173,7 @@ public class Layoutelements implements Parcelable {
     }
 
     public boolean hasSymlink() {
-        if (getSymlink() != null && getSymlink().length() != 0) {
-            return true;
-        } else return false;
+        return getSymlink() != null && getSymlink().length() != 0;
     }
 
     @Override

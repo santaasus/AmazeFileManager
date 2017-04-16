@@ -19,6 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="storage">Emmagatzematge</string>
   <string name="cancel">CANCEL·LA</string>
   <string name="save">Desa</string>
   <string name="share">Comparteix</string>
@@ -54,13 +55,13 @@
   <string name="new_string">Nova</string>
   <string name="install">Instal·la</string>
   <string name="details">Detalls</string>
+  <string name="warning">Alerta</string>
   <string name="donate">Donar</string>
   <string name="other">Altres</string>
   <string name="none">Cap</string>
   <string name="password">Contrasenya</string>
   <string name="defualt">per defecte</string>
   <string name="path">Camí</string>
-  <string name="empty"></string>
   <string name="start_ftp">Inicia</string>
   <string name="information">Informació</string>
   <!-- reference to file accessed date -->
@@ -76,4 +77,5 @@
   <!-- reference to - 'Written #bytes out of #bytes' in process viewer -->
   <!-- reference to - 'Processing file # of #' in process viewer -->
   <string name="permission_other">Altres</string>
+  <!-- references 'name/size/location/hash' copied to clipboard -->
 </resources>
